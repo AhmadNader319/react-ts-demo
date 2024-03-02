@@ -1,8 +1,10 @@
 import './App.css';
 import { Greet } from './components/Greet';
+import { Status } from './components/Status';
 import { Person } from './components/person';
-import { NameList } from './components/personList'; // Update the import statement
-
+import { NameList } from './components/personList'; 
+import { Heading }from './components/Heading';
+import { Oscar } from './components/Oscar';
 function App() {
   const personName = {
     first: 'Ahmad',
@@ -26,10 +28,15 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name="ahmed" messageCount={10} isLogged={false} />
+      <Greet name="ahmed" isLogged={true} />
       <Person name={personName} />
       <NameList names={namesList} /> {/* Update the component name and pass the prop */}
+      <Status status='success' />
+      <Oscar>
+           <Heading>Ahmad goes to His daughter</Heading>
+      </Oscar>
     </div>
+    
   );
 }
 
