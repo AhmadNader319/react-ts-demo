@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Greet } from './components/Greet';
+import { Person } from './components/person';
+import { NameList } from './components/personList'; // Update the import statement
 
 function App() {
+  const personName = {
+    first: 'Ahmad',
+    last: 'Nader',
+  };
+
+  const namesList = [
+    {
+      first: 'Hana',
+      last: 'Ahmad',
+    },
+    {
+      first: 'Nader',
+      last: 'AbdelMoneim',
+    },
+    {
+      first: 'Sayed',
+      last: 'Ibrahim',
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet name="ahmed" messageCount={10} isLogged={false} />
+      <Person name={personName} />
+      <NameList names={namesList} /> {/* Update the component name and pass the prop */}
     </div>
   );
 }
