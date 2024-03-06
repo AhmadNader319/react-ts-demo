@@ -5,6 +5,8 @@ import { Person } from './components/person';
 import { NameList } from './components/personList'; 
 import { Heading }from './components/Heading';
 import { Oscar } from './components/Oscar';
+import { PostList } from './components/PostList';
+
 function App() {
   const personName = {
     first: 'Ahmad',
@@ -35,6 +37,7 @@ function App() {
       <Oscar>
            <Heading>Ahmad goes to His daughter</Heading>
       </Oscar>
+      <PostList />
     </div>
     
   );
